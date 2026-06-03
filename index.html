@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTEA LAB | Laboratorio Textil & Moda de Autor</title>
+    <meta name="description" content="GOTEA LAB. Diseño de vestuario de autor y confección a mano en Concepción, Chile. Cuestionando patrones de moda hegemónica y estereotipos de género. Creado por Arrayán Lecaros.">
+    <meta name="keywords" content="moda de autor, diseño de vestuario, upcycling, gotea lab, concepcion, chile, sastreria, ropa a mano, moda sin genero">
+    <meta name="author" content="Arrayán Lecaros">
+    
+    <!-- Enlace a estilos -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Iconos (FontAwesome para redes sociales e interactividad) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Pantalla de carga (Loader con logo) -->
+    <div id="loader">
+        <div class="loader-content">
+            <img src="assets/images/logo-red.png" alt="GOTEA LAB Logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Encabezado de Navegación -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="assets/images/logo-red.png" alt="GOTEA LAB Logo" class="nav-logo">
+            </a>
+            
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#manifiesto" class="nav-item">Manifiesto</a></li>
+                    <li><a href="#servicios" class="nav-item">Servicios</a></li>
+                    <li><a href="#coleccion" class="nav-item">Colección</a></li>
+                    <li><a href="#contacto" class="nav-item">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Portada (Hero Section con video de fondo) -->
+    <section class="hero" id="home">
+        <div class="video-background-container">
+            <!-- Video de portada autoplay, silenciado y en bucle -->
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/videos/portada.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-logo-wrapper">
+                <img src="assets/images/logo-red.png" alt="GOTEA LAB" class="hero-logo animate-fade-in">
+            </div>
+            <p class="hero-subtitle animate-slide-up">LABORATORIO TEXTIL</p>
+            <p class="hero-location animate-slide-up">CONCEPCIÓN, CHILE</p>
+            <div class="hero-buttons animate-slide-up">
+                <a href="#coleccion" class="btn btn-primary">Ver Colección</a>
+                <a href="#contacto" class="btn btn-secondary">Agenda tu Proyecto</a>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <a href="#manifiesto">
+                <span>SCROLL</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección de Manifiesto (Presentación de Marca) -->
+    <section class="manifiesto" id="manifiesto">
+        <div class="manifiesto-container">
+            <div class="manifiesto-grid">
+                <div class="manifiesto-image-side">
+                    <!-- Mostramos la imagen de la textura abstracta ondulada (fondo 1) -->
+                    <div class="image-frame">
+                        <img src="assets/images/fondo-1.jpg" alt="Textura Orgánica Gotea" class="manifiesto-texture">
+                        <div class="brand-badge">EST. 2025</div>
+                    </div>
+                </div>
+                <div class="manifiesto-text-side">
+                    <h2 class="section-title">EL MANIFIESTO</h2>
+                    <h3 class="highlight-title">ROMPE CON TODO.</h3>
+                    <p class="manifiesto-desc">
+                        Soy <strong>Arrayán Lecaros</strong>, diseñador y confeccionista de vestuario en Concepción, creador de <strong>GOTEA</strong>.
+                    </p>
+                    <p class="manifiesto-body">
+                        GOTEA es un proyecto de laboratorio textil, donde se busca romper con todo. Exploro crear sin límites y cuestionar los patrones de moda hegemónica y estereotipos de género.
+                    </p>
+                    <p class="manifiesto-emphasis">
+                        Cada prenda es producción a mano respetando la esencia del oficio y la identidad de la persona.
+                    </p>
+                    <div class="manifiesto-footer">
+                        <img src="assets/images/logo-black.png" alt="Gotea Lab Logo" class="manifiesto-signature-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="servicios" id="servicios">
+        <div class="servicios-overlay"></div>
+        <div class="servicios-container">
+            <h2 class="section-title text-center text-white">SERVICIOS</h2>
+            <p class="section-subtitle text-center">LO QUE HACEMOS EN EL LABORATORIO</p>
+            
+            <div class="servicios-grid">
+                <!-- Servicio 1 -->
+                <div class="servicio-card">
+                    <div class="servicio-card-inner">
+                        <div class="servicio-icon">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <h3>PIEZAS ÚNICAS</h3>
+                        <p class="servicio-desc-text">Diseño de autor y confección personalizada. Prendas únicas conceptualizadas y manufacturadas desde cero a tu medida.</p>
+                        <span class="servicio-badge">Autor</span>
+                    </div>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="servicio-card">
+                    <div class="servicio-card-inner">
+                        <div class="servicio-icon">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+                        <h3>TRANSFORMACIÓN & UPCYCLING</h3>
+                        <p class="servicio-desc-text">Damos una nueva identidad y estructura a tus prendas existentes. Rediseño circular para reducir el residuo textil con estilo propio.</p>
+                        <span class="servicio-badge">Circular</span>
+                    </div>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="servicio-card">
+                    <div class="servicio-card-inner">
+                        <div class="servicio-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3>ASESORÍA CREATIVA</h3>
+                        <p class="servicio-desc-text">Proceso de co-creación para piezas personalizadas. Diseñamos juntos la prenda que exprese tu verdadera identidad sin límites.</p>
+                        <span class="servicio-badge">Co-creación</span>
+                    </div>
+                </div>
+                
+                <!-- Servicio 4 -->
+                <div class="servicio-card">
+                    <div class="servicio-card-inner">
+                        <div class="servicio-icon">
+                            <i class="fa-solid fa-needle"></i>
+                        </div>
+                        <h3>AJUSTES</h3>
+                        <p class="servicio-desc-text">Modificaciones técnicas precisas: bastas, cambios de cierres, parches artísticos, pinzas y adaptación anatómica perfecta.</p>
+                        <span class="servicio-badge">Taller</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="servicios-cta">
+                <p>AGENDA ABIERTA PARA NUEVOS PROYECTOS</p>
+                <a href="#contacto" class="btn btn-primary btn-large">¡MENSAJEAME AL DM!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Colección (Criaturas) -->
+    <section class="coleccion" id="coleccion">
+        <div class="coleccion-foil-overlay"></div>
+        <div class="coleccion-container">
+            <div class="coleccion-header">
+                <h2 class="section-title">COLECCIÓN</h2>
+                <h3 class="collection-title-name">CRIATURAS</h3>
+                <p class="collection-intro">
+                    Explora los outfits en movimiento de nuestra primera colección. Videos dinámicos que muestran la caída, estructura y carácter de las prendas confeccionadas en nuestro laboratorio.
+                </p>
+            </div>
+
+            <!-- Galería de Videos Dinámicos -->
+            <div class="video-grid">
+                <!-- Video Item 1: Dron Velo -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video loop muted playsinline preload="metadata" class="outfit-video">
+                            <source src="assets/videos/dron-velo.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-card-overlay">
+                            <span class="video-tag">Velo Ajustado</span>
+                            <button class="play-btn-overlay"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 2: YouCut Clip -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video loop muted playsinline preload="metadata" class="outfit-video">
+                            <source src="assets/videos/youcut.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-card-overlay">
+                            <span class="video-tag">Detalles Colección</span>
+                            <button class="play-btn-overlay"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3: Dron 1 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video loop muted playsinline preload="metadata" class="outfit-video">
+                            <source src="assets/videos/dron-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-card-overlay">
+                            <span class="video-tag">Outfit Dron I</span>
+                            <button class="play-btn-overlay"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 4: Dron 4 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video loop muted playsinline preload="metadata" class="outfit-video">
+                            <source src="assets/videos/dron-4.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-card-overlay">
+                            <span class="video-tag">Outfit Dron IV</span>
+                            <button class="play-btn-overlay"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 5: Dron 6 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video loop muted playsinline preload="metadata" class="outfit-video">
+                            <source src="assets/videos/dron-6.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-card-overlay">
+                            <span class="video-tag">Outfit Dron VI</span>
+                            <button class="play-btn-overlay"><i class="fa-solid fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de Descarga / Visualización del Book -->
+            <div class="book-download-section">
+                <div class="book-box-card">
+                    <div class="book-box-info">
+                        <h4>BOOK OFICIAL CRIATURAS</h4>
+                        <p>Descarga el catálogo completo corregido de nuestra primera colección con las fotografías artísticas editoriales y especificaciones de diseño.</p>
+                    </div>
+                    <div class="book-box-action">
+                        <a href="assets/docs/Criaturas.pdf" target="_blank" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-file-pdf"></i> VER BOOK CRIATURAS
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto y Equipo -->
+    <section class="contacto" id="contacto">
+        <div class="contacto-container">
+            <div class="contacto-grid">
+                
+                <!-- Info de Contacto e Instagram -->
+                <div class="contacto-info-side">
+                    <h2 class="section-title text-white">CONTACTO</h2>
+                    <p class="contacto-intro-text">
+                        ¿Tienes una idea en mente, quieres agendar un ajuste o cotizar una pieza única? Hablemos directamente a través de nuestras redes.
+                    </p>
+                    
+                    <div class="social-links-container">
+                        <a href="https://instagram.com/gotea.lab" target="_blank" class="social-card">
+                            <div class="social-icon-box">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="social-details">
+                                <span class="social-label">Instagram Principal</span>
+                                <span class="social-handle">@gotea.lab</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-link"></i>
+                        </a>
+
+                        <a href="https://instagram.com/meduhollow" target="_blank" class="social-card">
+                            <div class="social-icon-box">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="social-details">
+                                <span class="social-label">Instagram Personal / Book</span>
+                                <span class="social-handle">@meduhollow</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-link"></i>
+                        </a>
+                    </div>
+
+                    <!-- Equipo y Créditos -->
+                    <div class="team-credits">
+                        <h4 class="credits-title">CRÉDITOS EQUIPO:</h4>
+                        <ul class="credits-list">
+                            <li><strong>Diseñador:</strong> Arrayán Lecaros</li>
+                            <li><strong>Modelo:</strong> Velo Negro</li>
+                            <li><strong>Video Aéreo:</strong> Sebastián Ganchala</li>
+                            <li><strong>Dirección de Foto:</strong> Loreto S. Villarroel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formulario de Mensaje Rápido -->
+                <div class="contacto-form-side">
+                    <div class="form-container-card">
+                        <h3>ESCRIBENOS AL LABORATORIO</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Tu Nombre</label>
+                                <input type="text" id="name" required placeholder="Ej: Valentina Paz">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Tu Email</label>
+                                <input type="email" id="email" required placeholder="Ej: correo@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="idea">Cuéntanos tu idea o servicio requerido</label>
+                                <textarea id="idea" rows="4" required placeholder="Ej: Quiero cotizar un upcycling para una chaqueta de mezclilla antigua..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">ENVIAR CONSULTA</button>
+                            <div id="form-message" class="form-response"></div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo-box">
+                <img src="assets/images/logo-red.png" alt="Gotea Lab Logo" class="footer-logo">
+            </div>
+            <p class="footer-text">&copy; 2026 GOTEA LAB. Confeccionado a mano en Concepción, Chile. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script de interactividad -->
+    <script src="script.js"></script>
+</body>
+</html>
