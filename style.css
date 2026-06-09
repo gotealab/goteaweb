@@ -1249,3 +1249,45 @@ h1, h2, h3, h4, h5, h6 {
         gap: 50px;
     }
 }
+
+/* ==========================================================================
+   BOTÓN FLOTANTE DE WHATSAPP (FAB)
+   ========================================================================== */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.1) translateY(-3px);
+    background-color: #20ba5a;
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-fab:active {
+    transform: scale(0.95) translateY(0);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-fab {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+}
+
