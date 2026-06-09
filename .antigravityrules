@@ -1,0 +1,15 @@
+# Reglas de Desarrollo para GOTEA LAB
+
+Este archivo contiene instrucciones de automatización y diseño persistentes para Antigravity y otros asistentes de IA que trabajen en este repositorio.
+
+## Despliegue y Control de Versiones (GitHub & Vercel)
+- **Automatización de Despliegue**: El proyecto gotea.cl está conectado a Vercel mediante GitHub. Cualquier cambio de código local verificado debe subirse a producción inmediatamente.
+- **Flujo de Trabajo Post-Modificación**:
+  1. Al terminar cualquier edición solicitada por el usuario, ejecuta automáticamente `git add` de los archivos modificados.
+  2. Genera un commit limpio con un mensaje descriptivo (ej: `style: actualizar logo en portada`).
+  3. Ejecuta `git push` a la rama actual en GitHub de manera automática para activar el despliegue automático en Vercel.
+  4. Informa al usuario que los cambios han sido subidos y que Vercel está procesando la nueva versión.
+
+## Pautas Estéticas (Cyber-Industrial Textile Lab)
+- **Colores**: Mantener el esquema de negro profundo (`#070707`), rojo carmesí brillante (`#e02828` / `#a31d1d`) y detalles grises.
+- **Tipografía**: Priorizar las fuentes experimentales brutalistas cargadas localmente (`Calvera`, `Darkhorn`, `DeathMohawk`, `VampireWars`) para títulos y la fuente Google Font `Outfit` para textos de lectura generales.
