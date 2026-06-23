@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================================================
-    // 6. FORMULARIO DE CONTACTO SIMULADO
+    // 6. FORMULARIO DE CONTACTO REAL (FORMSUBMIT)
     // ==========================================================================
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
@@ -201,15 +201,34 @@ document.addEventListener('DOMContentLoaded', () => {
             formMessage.textContent = '';
             formMessage.className = 'form-response';
 
-            // Simular respuesta del servidor tras 1.5s
-            setTimeout(() => {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const idea = document.getElementById('idea').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const idea = document.getElementById('idea').value;
 
+            // Enviar datos vía AJAX a FormSubmit
+            fetch("https://formsubmit.co/ajax/gotea.lab@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    Nombre: name,
+                    Email: email,
+                    Consulta: idea,
+                    _subject: `Nueva consulta de ${name} en gotea.cl`
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al enviar formulario');
+                }
+                return response.json();
+            })
+            .then(data => {
                 // Mensaje exitoso
-                formMessage.textContent = `¡Gracias, ${name}! Tu propuesta ha sido guardada. Nos pondremos en contacto contigo a ${email} o mándanos un DM en Instagram para acelerar el proceso.`;
-                formMessage.classList.add('success');
+                formMessage.textContent = `¡Gracias, ${name}! Tu consulta ha sido enviada con éxito. Nos pondremos en contacto contigo a ${email} o mándanos un DM en Instagram para acelerar el proceso.`;
+                formMessage.className = 'form-response success';
 
                 // Limpiar formulario y restaurar botón
                 contactForm.reset();
@@ -221,8 +240,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     formMessage.textContent = '';
                     formMessage.className = 'form-response';
                 }, 8000);
-
-            }, 1500);
+            })
+            .catch(error => {
+                console.error("Error al enviar el formulario:", error);
+                // Mensaje de error
+                formMessage.textContent = 'Hubo un problema al enviar tu consulta. Por favor, intenta de nuevo o escríbenos directamente a través de nuestro Instagram.';
+                formMessage.className = 'form-response error';
+                
+                // Restaurar botón
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            });
         });
     }
 });
